@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="playerSelection">
+      <p>What shape do you want to play?</p>
+      <div class="radio-buttons">
+        <label>
+          <input type="radio" name="shapes" value="circle" checked />
+          <img class="circle" src="/assets/tabler-icon-circle.svg" alt="" />
+        </label>
+        <label>
+          <input type="radio" name="shapes" value="cross" />
+          <img class="cross" src="/assets/tabler-icon-x.svg" alt="" />
+        </label>
+      </div>
+    </div>
+    <div data-grid-container class="grid-container" id="grid-container">
+      <div class="tile one" id="tileOne"></div>
+      <div class="tile two" id="tileTwo"></div>
+      <div class="tile three" id="tileThree"></div>
+      <div class="tile four" id="tileFour"></div>
+      <div class="tile five" id="tileFive"></div>
+      <div class="tile six" id="tileSix"></div>
+      <div class="tile seven" id="tileSeven"></div>
+      <div class="tile eight" id="tileEight"></div>
+      <div class="tile nine" id="tileNine"></div>
+    </div>
+  </body>
+</html>
