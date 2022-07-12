@@ -21,16 +21,17 @@ tiles.forEach((tile) => {
     const tileID = e.target.getAttribute("id");
     const tileSelected = document.getElementById(tileID);
     const shape = document.createElement("img");
-    if (player.shape === "circle") {
-      shape.classList.add("circle");
-      shape.setAttribute("src", "/assets/tabler-icon-circle.svg");
-    } else if (player.shape === "cross") {
-      shape.classList.add("cross");
-      shape.setAttribute("src", "/assets/tabler-icon-x.svg");
-    } else {
-      console.error("Invalid shape of player.elementShape");
+    if (!tile.hasChildNodes()) {
+      if (player.shape === "circle") {
+        shape.classList.add("circle");
+        shape.setAttribute("src", "/assets/tabler-icon-circle.svg");
+      } else if (player.shape === "cross") {
+        shape.classList.add("cross");
+        shape.setAttribute("src", "/assets/tabler-icon-x.svg");
+      } else {
+        console.error("Invalid shape of player.elementShape");
+      }
+      tileSelected.appendChild(shape);
     }
-
-    tileSelected.appendChild(shape);
   });
 });
